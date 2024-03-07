@@ -1,0 +1,49 @@
+git init
+
+git config --global user.name "thanmuhgil"
+git config --global user.email "kthanmughil@gmail.com"
+
+git add *
+git commit -m "Initial Commit"
+
+ssh-keygen -t rsa -b 4096 -C "kthanmughil@gmail.com"
+
+# Add SSH key to GitHub account
+
+git remote add origin git@github.com:thanmughil/WalmartGit.git
+git remote -v
+
+git status
+
+git add *
+git commit -m "3rdCommit"
+
+git rm W*
+git commit -m "deletion"
+
+# Adding new file
+
+touch sample.txt
+nano sample.txt
+less sample.txt
+
+git add sample.txt
+git commit -m "New File"
+git push origin master
+
+# Removing private key
+
+git rm id_rsa
+git commit -m "Remove private in GitHub"
+git status
+git push origin master
+
+# Adding Commands.txt
+
+touch Commands.txt
+nano Commands.txt
+less Commands.txt
+
+git add Commads.txt
+git commit -m "Commands"
+git push origin master
