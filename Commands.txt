@@ -47,3 +47,22 @@ less Commands.txt
 git add Commads.txt
 git commit -m "Commands"
 git push origin master
+
+#Fetch RemoteRepo
+
+git remote add repoFork git@github.com:sanjay-223/WalmartCollabRepo.git
+git fetch repoFork
+
+# Modify file to push to external repo
+
+nano index.html
+git status
+git add index.html
+git commit -m "Added Table by 150"
+git push repoFork dk_test
+
+# Merge to local branch and push to remote
+
+git checkout master
+git merge dk_test
+git push repoFork HEAD:master
